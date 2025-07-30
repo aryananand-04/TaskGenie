@@ -1,16 +1,15 @@
-def render_output(task_data: dict):
-    """
-    Renders the autocompleted task output nicely to the terminal.
-    """
-    print("\n🔧 Original Task:")
-    print(f"  {task_data['original_task']}")
+# output/output_renderer.py
 
-    print("\n✅ Autocompleted Task:")
-    print(f"  {task_data['autocompleted_task']}")
+def render_output(task_info: dict) -> None:
+    print("\n📌 Autocompleted Task:")
+    print(f"→ {task_info['autocompleted_task']}\n")
 
-    print("\n🧩 Subtasks:")
-    for idx, subtask in enumerate(task_data['subtasks'], 1):
-        print(f"  {idx}. {subtask}")
+    print("🧠 Reasoning:")
+    print(f"{task_info.get('reasoning', 'N/A')}\n")
 
-    print("\n💡 Reasoning:")
-    print(f"  {task_data['reasoning']}")
+    print("📋 Subtasks:")
+    for i, sub in enumerate(task_info.get("subtasks", []), start=1):
+        print(f"{i}. {sub}")
+
+    print("\n🧾 Context Used:")
+    print(task_info.get("context_used", "No context provided."))
