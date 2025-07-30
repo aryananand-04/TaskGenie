@@ -1,10 +1,12 @@
-def autocomplete_task(task_input: str, context: str = "") -> dict:
-    """
-    Given a vague task input and optional context, return a dummy autocompleted version of the task.
-    """
-    # This will be replaced with actual LLM logic later
+# agents/task_autocomplete.py
+
+from context.context_collector import load_context
+
+def autocomplete_task(task_input: str) -> dict:
+    context = load_context()  # Load actual context
     return {
         "original_task": task_input,
+        "context_used": context,
         "autocompleted_task": "Fix the ElasticSearch query in search.py",
         "subtasks": [
             "Check logs in search.py",
