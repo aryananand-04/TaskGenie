@@ -2,8 +2,7 @@
 
 from context.context_collector import load_context
 
-def autocomplete_task(task_input: str) -> dict:
-    context = load_context()  # Load actual context
+def autocomplete_task(task_input: str, context: str) -> dict:
     return {
         "original_task": task_input,
         "context_used": context,
