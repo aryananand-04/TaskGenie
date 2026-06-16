@@ -1,0 +1,10 @@
+export default function TasksPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-semibold mb-4">Tasks</h1>
+      <p className="text-gray-600">
+        Your saved and in-progress tasks will appear here.
+      </p>
+    </div>
+  );
+}

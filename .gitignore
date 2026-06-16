@@ -1,1 +1,14 @@
+# Secrets
 .env
+.env.local
+
+# Claude Code (local tooling — keep out of the repo)
+.claude/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store

@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, ListChecks, Users, Settings } from "lucide-react";
+import { Home, ListChecks, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
@@ -8,7 +8,6 @@ import clsx from "clsx";
 const links = [
   { href: "/dashboard", label: "Overview", icon: Home },
   { href: "/dashboard/tasks", label: "Tasks", icon: ListChecks },
-  { href: "/dashboard/team", label: "Team", icon: Users },
   { href: "/dashboard/settings", label: "Settings", icon: Settings },
 ];
 

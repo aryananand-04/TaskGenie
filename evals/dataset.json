@@ -1,0 +1,72 @@
+[
+  {
+    "id": "decamelize-acronyms",
+    "vague_task": "camelCase splitting is wrong for acronyms",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js"],
+    "notes": "Should point at the `decamelize` function in index.js and its acronym regexes (e.g. the `[a-rt-z]` rule that avoids splitting plural acronyms like 'APIs')."
+  },
+  {
+    "id": "moot-separators",
+    "vague_task": "I get double dashes in the output",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js"],
+    "notes": "Should identify `removeMootSeparators` in index.js, which collapses repeated separators and trims leading/trailing ones."
+  },
+  {
+    "id": "preserve-characters",
+    "vague_task": "let me keep some special characters",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js", "index.d.ts"],
+    "notes": "Should reference the `preserveCharacters` option and `buildPatternSlug` in index.js (and the Options type in index.d.ts), including the error thrown when a preserved char equals the separator."
+  },
+  {
+    "id": "counter-collisions",
+    "vague_task": "duplicate slugs collide",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js"],
+    "notes": "Should reference `slugifyWithCounter` in index.js and its `occurrences` Map / numbering logic."
+  },
+  {
+    "id": "custom-replacements-test",
+    "vague_task": "add tests for custom replacements",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["test.js", "overridable-replacements.js"],
+    "notes": "Should name test.js (AVA) and the `customReplacements` option / overridable-replacements.js built-ins like ['&', ' and '] and the unicorn emoji."
+  },
+  {
+    "id": "input-validation",
+    "vague_task": "it should fail more clearly on bad input",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js"],
+    "notes": "Should reference the `TypeError` guard at the top of `slugify` in index.js ('Expected a string, got ...') and the separator/preserveCharacters Error."
+  },
+  {
+    "id": "locale-docs",
+    "vague_task": "document the locale option",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.d.ts", "index.js"],
+    "notes": "Should reference the `locale` option in index.d.ts and its use in `toLocaleLowerCase(options.locale)` and transliterate in index.js."
+  },
+  {
+    "id": "contractions",
+    "vague_task": "apostrophes in words look wrong",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js"],
+    "notes": "Should reference the contraction/possessive regex in index.js handling `'t`/`'s` with straight and curly apostrophes."
+  },
+  {
+    "id": "leading-underscore",
+    "vague_task": "make leading underscore handling optional",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["index.js", "index.d.ts"],
+    "notes": "Should reference `preserveLeadingUnderscore` / `shouldPrependUnderscore` in index.js and the Options type."
+  },
+  {
+    "id": "more-replacements",
+    "vague_task": "the built-in symbol replacements are limited",
+    "repo": "sindresorhus/slugify",
+    "expected_paths": ["overridable-replacements.js"],
+    "notes": "Should reference overridable-replacements.js (the ['&',' and '], ['♥',' love '], unicorn list) and how customReplacements override them."
+  }
+]

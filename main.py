@@ -1,6 +1,7 @@
 from context.context_collector import load_context
 from agents.task_autocomplete import autocomplete_task
 from output.output_renderer import render_output
+from feedback.feedback_loop import save_completed_task
 
 def main():
     print("🔍 Welcome to Intern Task Autocomplete Agent!")
@@ -27,6 +28,9 @@ def main():
 
     # Step 5: Render and print the output
     render_output(completed_task)
+
+    # Step 6: Persist the result so it becomes context for future runs
+    save_completed_task(task_input, completed_task)
 
 if __name__ == "__main__":
     main()
